@@ -35,9 +35,9 @@ pysmle init
 ### Configuration
 
 pySMLE relies on a simple YAML structure to define hyperparameters, paths, logging options, and integrations.
-You can configure the ``pysmle.yaml`` file with the hyperparameters and options for your project.
+You can configure the ``smle.yaml`` file with the hyperparameters and options for your project.
 
-The structure of the ``pysmle.yaml`` file is:
+The structure of the ``smle.yaml`` file is:
 
 ```yaml
 # ---------------------------------------
@@ -82,9 +82,9 @@ You can put it in the `.env` file, but ensure `.env` is in your `.gitignore`.
 Use the `@app.entrypoint` decorator. Your configuration variables are automatically passed via `args`.
 
 ```python
-from pysmle import pySMLE
+from smle import pySMLE
 
-app = pySMLE()
+app = SMLE()
 
 @app.entrypoint
 def main(args):
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     app.run()
 ```
 
-By default, pySMLE will look for a configuration file named `pysmle.yaml` in the current directory. If you would like to use a different name, a different location, or have multiple configuration files for different configurations, you can set the `config_file` property of pySMLE to the path of your file. You must assign the filename before calling `run()`.
+By default, pySMLE will look for a configuration file named `smle.yaml` in the current directory. If you would like to use a different name, a different location, or have multiple configuration files for different configurations, you can set the `config_file` property of pySMLE to the path of your file. You must assign the filename before calling `run()`.
 
 ```python
 app = pySMLE()
